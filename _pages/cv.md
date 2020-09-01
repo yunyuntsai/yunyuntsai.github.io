@@ -11,30 +11,40 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* M.S. in National Tsing Hua University, Sep. 2018- Jun. 2020
+  * Advisor: Dr. Tsung-Yi Ho
+  * Overall GPA: 4.18 / 4.3
+  * Visiting Student at the HSL at University of Florida (UF), Gainesville, Florida, Mar. 2019 – Aug. 2019
+    * Advisor: Dr. Yier Jin 
+* B.S. in National Tsing Hua University, Sep. 2014- Jun. 2018
+  * Overall GPA: 3.5 / 4.3, Last 60 GPA: 3.89 / 4.3
+
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Graduate Research Assistant, July. 2020 – present
+  >National Tsing Hua University, THETA Lab
+  > Advisor: Dr. Tsung-Yi Ho
+  > Focus on the research about federated learning system and sophisticated adversarial attack. Jointly work with Prof. Yiran Chen in   Duke University
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* R&D Intern, Jul. 2017 – Jun. 2018
+  > Microsoft Taiwan Azure IoT team
+  > Mentor: Cheryl Hsu, Cloud Solution Architect
+  > Built POC (covers Smart City/Retail/Home/Manufacturing) leveraging Azure IoT Cloud services todemonstrate IoT solutions to 10+ technical business partners.
+
+* Microsoft 2017 Coding Angel, R&D Leader
+  > Designed/Created Azure Machine Learning hands-on materials with Microsoft MVPs and delivered the workshop in coding angel event to 100+ college STEM female students
+ 
   
-Skills
+Profesional Skills and Activities
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Programming Languages
+  * C/C++, Python, Verilog, etc.
+  * Package: Deep Learning Framework (ex: Tensorflow, Pytorch), Scikit-Learn, Keras, etc.
+* Certification
+  * Microsoft Professional Program Certificate in Data Science
+* English Skill
+  * Toefl: 99 (R 25, L 25, S23, W 26)
 
 Publications
 ======
@@ -44,16 +54,15 @@ Publications
   
 Talks
 ======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
+* Invited talk at CYBERSEC - Aug. 20. 2020
+  > Giving a keynote about “CloudLeak: DNN Model Extractions from Commercial MLaaS Platforms” at CYBERSEC Taiwan 2020, one of the largest cybersecurity conference and exhibition in the Asia Pacific Region. 
+ 
+
   
-Teaching
+Extracurricular Activities
 ======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+* First stand of Viola in National Tsing Hua University Orchestra, Sep.2014 – June. 2018 
+  * Have 10+ years performance experiences	
+* Student Association of Computer Science Department in NTHU, Sep. 2016 – Jul. 2017
+
+

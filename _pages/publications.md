@@ -5,7 +5,23 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if author.googlescholar %}
+* Transfer Learning without Knowing, Reprogramming black box machine learning model with scarce data and limited resources
+  **Yun-Yun Tsai**, Pin-Yu Chen, Tsung-Yi Ho
+  International Conference on Machine Learning (ICML), 2020
+
+* Adversarial Machine Learning for Social Good: Reprogramming black box machine learning model with scarce data and limited resources.
+  **Yun-Yun Tsai**, Pin-Yu Chen, Tsung-Yi Ho,
+  Neural Information Processing Systems (NeurIPS) NewInML Workshop, Poster, 2019.
+
+* CloudLeak: Large-Scale Deep Learning Models Stealing Through Adversarial Examples
+  Honggang Yu, Kaichen Yang, Teng Zhang, **Yun-Yun Tsai**, Tsung-Yi Ho, Yier Jin
+  Network and Distributed System Security Symposium (NDSS), 2020
+
+* Vehicle Sequence Reordering with Cooperative Adaptive Cruise Control
+  Ta-Wei Huang, **Yun-Yun Tsai**, Chung-Wei Lin, Tsung-Yi Ho
+  Design, Automation & Test in Europe Conference & Exhibition (DATE), 2019
+
+<!-- {% if author.googlescholar %}
   You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
 {% endif %}
 
@@ -13,4 +29,4 @@ author_profile: true
 
 {% for post in site.publications reversed %}
   {% include archive-single.html %}
-{% endfor %}
+{% endfor %} -->
