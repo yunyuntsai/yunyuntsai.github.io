@@ -14,10 +14,8 @@ Education
 * M.S. in National Tsing Hua University, Sep. 2018- Jun. 2020
   * Advisor: Dr. Tsung-Yi Ho
   * Overall GPA: 4.18 / 4.3
-  * Visiting Student at the HSL at University of Florida (UF), Gainesville, Florida, Mar. 2019 – Aug. 2019<br/>
-    Advisor: Dr. Yier Jin 
 * B.S. in National Tsing Hua University, Sep. 2014- Jun. 2018
-  * Overall GPA: 3.5 / 4.3, Last 60 GPA: 3.89 / 4.3
+  * Last 60 GPA: 3.89 / 4.3
 
 
 Work experience
@@ -26,6 +24,11 @@ Work experience
   * National Tsing Hua University, THETA Lab
   * Advisor: Dr. Tsung-Yi Ho
   > Focus on the research about federated learning system and sophisticated adversarial attack. Jointly work with Prof. Yiran Chen in   Duke University
+
+* Visiting Student, Mar. 2019 – Aug. 2019
+  * HSL at University of Florida (UF), Gainesville, Florida,
+  * Advisor: Dr. Yier Jin 
+  > Focus on the research about model retrieving attack against large-scale deep learning network.
 
 * R&D Intern, Jul. 2017 – Jun. 2018
   * Microsoft Taiwan Azure IoT team

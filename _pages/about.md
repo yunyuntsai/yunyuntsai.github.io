@@ -11,10 +11,9 @@ redirect_from:
 
 Yun-Yun Tsai
 ======
-* I’m currently a research assistant from the department of computer science in National Tsing Hua University (NTHU) and I'm looking for phD degree in 2021 fall semester in United States.
+* I’m a graduated master student and research assistant at the department of computer science in National Tsing Hua University (NTHU).
 * My research focuses on Artificial Intelligence Security, Adversarial Machine Learning toward the robustness of deep neural networks, including attack, defense and robust evaluation.
-* I received both M.S. and B.S in Computer Science in 2020, and 2018 from National Tsing Hua University (NTHU). Previously, I worked with Prof. Tsung-Yi Ho and Dr. Pin-Yu Chen from IBM Watson AI research on adversarial attack and model reprogramming.
-
+* I'm currently working with Prof. Tsung-Yi Ho and Dr. Pin-Yu Chen from IBM Watson AI research.
 
 Contact
 ------
