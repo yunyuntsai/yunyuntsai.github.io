@@ -36,7 +36,7 @@ Work experience
   > Designed/Created Azure Machine Learning hands-on materials with Microsoft MVPs and delivered the workshop in coding angel event to 100+ college STEM female students
  
   
-Profesional Skills and Activities
+Professional Skills and Activities
 ======
 * Programming Languages
   * C/C++, Python, Verilog, etc.
@@ -63,7 +63,7 @@ Publications
 * [Vehicle Sequence Reordering with Cooperative Adaptive Cruise Control](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8714722)<br/>
   Ta-Wei Huang, **Yun-Yun Tsai**, Chung-Wei Lin, Tsung-Yi Ho<br/>
   Design, Automation & Test in Europe Conference & Exhibition (DATE), 2019
-  
+
 Talks
 ======
 * Invited talk at CYBERSEC - Aug. 20. 2020
