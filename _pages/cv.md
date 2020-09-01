@@ -14,8 +14,8 @@ Education
 * M.S. in National Tsing Hua University, Sep. 2018- Jun. 2020
   * Advisor: Dr. Tsung-Yi Ho
   * Overall GPA: 4.18 / 4.3
-  * Visiting Student at the HSL at University of Florida (UF), Gainesville, Florida, Mar. 2019 – Aug. 2019
-    * Advisor: Dr. Yier Jin 
+  * Visiting Student at the HSL at University of Florida (UF), Gainesville, Florida, Mar. 2019 – Aug. 2019<br/>
+    Advisor: Dr. Yier Jin 
 * B.S. in National Tsing Hua University, Sep. 2014- Jun. 2018
   * Overall GPA: 3.5 / 4.3, Last 60 GPA: 3.89 / 4.3
 
@@ -25,7 +25,7 @@ Work experience
 * Graduate Research Assistant, July. 2020 – present
   * National Tsing Hua University, THETA Lab
   * Advisor: Dr. Tsung-Yi Ho
-  * Focus on the research about federated learning system and sophisticated adversarial attack. Jointly work with Prof. Yiran Chen in   Duke University
+  > Focus on the research about federated learning system and sophisticated adversarial attack. Jointly work with Prof. Yiran Chen in   Duke University
 
 * R&D Intern, Jul. 2017 – Jun. 2018
   * Microsoft Taiwan Azure IoT team
@@ -48,20 +48,20 @@ Profesional Skills and Activities
 
 Publications
 ======
-* Transfer Learning without Knowing, Reprogramming black box machine learning model with scarce data and limited resources</br>
-  **Yun-Yun Tsai**, Pin-Yu Chen, Tsung-Yi Ho</br>
+* Transfer Learning without Knowing, Reprogramming black box machine learning model with scarce data and limited resources<br/>
+  **Yun-Yun Tsai**, Pin-Yu Chen, Tsung-Yi Ho<br/>
   International Conference on Machine Learning (ICML), 2020
 
-* Adversarial Machine Learning for Social Good: Reprogramming black box machine learning model with scarce data and limited resources.</br>
-  **Yun-Yun Tsai**, Pin-Yu Chen, Tsung-Yi Ho </br>
+* Adversarial Machine Learning for Social Good: Reprogramming black box machine learning model with scarce data and limited resources.<br/>
+  **Yun-Yun Tsai**, Pin-Yu Chen, Tsung-Yi Ho <br/>
   Neural Information Processing Systems (NeurIPS) NewInML Workshop, Poster, 2019.
 
-* CloudLeak: Large-Scale Deep Learning Models Stealing Through Adversarial Examples</br>
-  Honggang Yu, Kaichen Yang, Teng Zhang, **Yun-Yun Tsai**, Tsung-Yi Ho, Yier Jin </br>
+* CloudLeak: Large-Scale Deep Learning Models Stealing Through Adversarial Examples<br/>
+  Honggang Yu, Kaichen Yang, Teng Zhang, **Yun-Yun Tsai**, Tsung-Yi Ho, Yier Jin <br/>
   Network and Distributed System Security Symposium (NDSS), 2020
 
-* Vehicle Sequence Reordering with Cooperative Adaptive Cruise Control </br>
-  Ta-Wei Huang, **Yun-Yun Tsai**, Chung-Wei Lin, Tsung-Yi Ho </br>
+* Vehicle Sequence Reordering with Cooperative Adaptive Cruise Control <br/>
+  Ta-Wei Huang, **Yun-Yun Tsai**, Chung-Wei Lin, Tsung-Yi Ho <br/>
   Design, Automation & Test in Europe Conference & Exhibition (DATE), 2019
   
 Talks
