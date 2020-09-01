@@ -5,7 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-* Transfer Learning without Knowing, Reprogramming black box machine learning model with scarce data and limited resources<br/>
+* [Transfer Learning without Knowing, Reprogramming black box machine learning model with scarce data and limited resources](https://arxiv.org/pdf/2007.08714.pdf)<br/>
   **Yun-Yun Tsai**, Pin-Yu Chen, Tsung-Yi Ho<br/>
   International Conference on Machine Learning (ICML), 2020
 
@@ -13,11 +13,11 @@ author_profile: true
   **Yun-Yun Tsai**, Pin-Yu Chen, Tsung-Yi Ho<br/>
   Neural Information Processing Systems (NeurIPS) NewInML Workshop, Poster, 2019.
 
-* CloudLeak: Large-Scale Deep Learning Models Stealing Through Adversarial Examples<br/>
+* [CloudLeak: Large-Scale Deep Learning Models Stealing Through Adversarial Examples](https://www.ndss-symposium.org/wp-content/uploads/2020/02/24178-paper.pdf)<br/>
   Honggang Yu, Kaichen Yang, Teng Zhang, **Yun-Yun Tsai**, Tsung-Yi Ho, Yier Jin<br/>
   Network and Distributed System Security Symposium (NDSS), 2020
 
-* Vehicle Sequence Reordering with Cooperative Adaptive Cruise Control<br/>
+* [Vehicle Sequence Reordering with Cooperative Adaptive Cruise Control](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8714722)<br/>
   Ta-Wei Huang, **Yun-Yun Tsai**, Chung-Wei Lin, Tsung-Yi Ho<br/>
   Design, Automation & Test in Europe Conference & Exhibition (DATE), 2019
 
