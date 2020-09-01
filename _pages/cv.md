@@ -23,13 +23,13 @@ Education
 Work experience
 ======
 * Graduate Research Assistant, July. 2020 – present
-  >National Tsing Hua University, THETA Lab
-  > Advisor: Dr. Tsung-Yi Ho
-  > Focus on the research about federated learning system and sophisticated adversarial attack. Jointly work with Prof. Yiran Chen in   Duke University
+  * National Tsing Hua University, THETA Lab
+  * Advisor: Dr. Tsung-Yi Ho
+  * Focus on the research about federated learning system and sophisticated adversarial attack. Jointly work with Prof. Yiran Chen in   Duke University
 
 * R&D Intern, Jul. 2017 – Jun. 2018
-  > Microsoft Taiwan Azure IoT team
-  > Mentor: Cheryl Hsu, Cloud Solution Architect
+  * Microsoft Taiwan Azure IoT team
+  * Mentor: Cheryl Hsu, Cloud Solution Architect
   > Built POC (covers Smart City/Retail/Home/Manufacturing) leveraging Azure IoT Cloud services todemonstrate IoT solutions to 10+ technical business partners.
 
 * Microsoft 2017 Coding Angel, R&D Leader
