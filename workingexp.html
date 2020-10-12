@@ -39,6 +39,23 @@
 				filter: drop-shadow(4px 4px 6px gray); 
 				transform: scale(1.1); 
 			} 
+
+			.imageHolder {
+				position: relative;
+				width: 285px;
+				height: 175px;
+			}
+			.imageHolder .caption {
+				position: absolute;
+				height: 50px;
+				bottom: 0px;
+				left: 0px;
+				color: black;
+				background: lightgray;
+				text-align:center;
+				font-weight:bold;
+				opacity:0.7;
+			}
 			@media screen and (max-width: 980px) {
 
 				.gallery img {
@@ -84,8 +101,12 @@
 							</section>
 					</div>
 					<div class="gallery"> 
-						<a href= "images/ms_life/onboard.jpg" data-lightbox="mygallery" data-title="On board day in Azure IoT team."> 
-						<img src= "images/ms_life/onboard.jpg" alt=""><span class="caption" style=text-align:bottom>On board day in Azure IoT team.</span> </a> 
+						<a href= "images/ms_life/onboard.jpg" data-lightbox="mygallery" data-title="On board day in Azure IoT team.">
+							<div class="imageHolder"> 
+								<img src="images/ms_life/onboard.jpg"  alt="" />
+								<div class="caption"><br>On board day in Azure IoT team.</div>
+							</div>
+						</a> 
 						<a href= "images/ms_life/mentor.jpg" data-lightbox="mygallery" data-title="With my mentor Cheryl Hsu.">
 						<img src="images/ms_life/mentor.jpg" alt=""> <caption style="caption-side:bottom">With my mentor Cheryl Hsu</caption> </a>
 					</div> 		
