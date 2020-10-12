@@ -40,13 +40,6 @@
 				transform: scale(1.1); 
 			} 
 
-			.caption {
-				position: absolute;
-				top: 25%;
-				left: 50%;
-				width: 200px;
-				background: rgba(255,255,255,0.2);
-			}
 
 			@media screen and (max-width: 980px) {
 
@@ -55,6 +48,13 @@
 					height: calc(50% - 2em);
 					transition: 1s; 
 					padding: 4px; 
+				}
+				.caption {
+					position: absolute;
+					top: 25%;
+					left: 50%;
+					width: 200px;
+					background: rgba(255,255,255,0.2);
 				}
 			}
 			@media screen and (max-width: 736px) {
@@ -94,11 +94,7 @@
 					</div>
 					<div class="gallery"> 
 						<a href= "images/ms_life/onboard.jpg" data-lightbox="mygallery" data-title="On board day in Azure IoT team.">
-							<div class="imageHolder"> 
-								<img src="images/ms_life/onboard.jpg"  alt="" />
-								<div class="caption">On board day in Azure IoT team.</div>
-							</div>
-						</a> 
+						<img src="images/ms_life/onboard.jpg"  alt=""> <caption style="caption-side:bottom">With my mentor Cheryl Hsu</caption> </a> 
 						<a href= "images/ms_life/mentor.jpg" data-lightbox="mygallery" data-title="With my mentor Cheryl Hsu.">
 						<img src="images/ms_life/mentor.jpg" alt=""> <caption style="caption-side:bottom">With my mentor Cheryl Hsu</caption> </a>
 					</div> 		
