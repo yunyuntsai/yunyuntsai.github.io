@@ -27,8 +27,8 @@
 			} 
 			  
 			.gallery img { 
-				width: 50%; 
-				height: 50%; 
+				width: 40%; 
+				height: 40%; 
 				transition: 1s; 
 				padding: 2px; 
 			} 
@@ -37,6 +37,24 @@
 				filter: drop-shadow(4px 4px 6px gray); 
 				transform: scale(1.1); 
 			} 
+			@media screen and (max-width: 980px) {
+
+				.gallery img {
+					width: calc(40% - 2em);
+					height: calc(40% - 2em);
+					transition: 1s; 
+					padding: 2px; 
+				}
+			}
+			@media screen and (max-width: 736px) {
+
+				.gallery img {
+					width: calc(100%);
+					height: calc(100%);
+					transition: 1s; 
+					padding: 2px; 
+				}
+			}
 		</style> 
 	</head>
 	<body class="is-preload">
@@ -64,9 +82,9 @@
 							</section>
 							<div class="gallery"> 
 								<a href= "images/ms_life/onboard.jpg" data-lightbox="mygallery"> 
-								<img src= "images/ms_life/onboard.jpg" alt="" /> </a> 
+								<img src= "images/ms_life/onboard.jpg" alt="" /> On board day in Azure IoT team.</a> 
 								<a href= "images/ms_life/mentor.jpg" data-lightbox="mygallery">
-								<img src="images/ms_life/mentor.jpg" alt="" /></a>
+								<img src="images/ms_life/mentor.jpg" alt="" />With my mentor Cheryl Hsu.</a>
 							</div> 		
 
 					</div>
