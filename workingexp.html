@@ -23,9 +23,7 @@
 			} 
 			  
 			.gallery { 
-				margin: 10px 40px; 
-				object-fit: cover;
-				object-position: 100% 0;
+				margin: 10px 10px; 
 			} 
 			  
 			.gallery img { 
@@ -57,6 +55,14 @@
 					height: calc(40% - 2em);
 					transition: 1s; 
 					padding: 4px; 
+				}
+				.gallery { 
+					-webkit-column-count: 2;
+					-moz-column-count: 2;
+					column-count: 2;
+				}
+				.gallery div { margin: 0; 
+					width: 200px;
 				}
 			}
 			@media screen and (max-width: 736px) {
