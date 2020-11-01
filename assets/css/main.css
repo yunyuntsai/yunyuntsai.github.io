@@ -100,10 +100,10 @@ input, select, textarea {
 
 	body {
 		background-color: #e29c89;
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #838bb2 15%, #e29c89 75%);
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #838bb2 15%, #e29c89 75%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #838bb2 15%, #e29c89 75%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, #838bb2 15%, #e29c89 75%);
+		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #ff9a76 15%, #ffeadb 75%);
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #ff9a76 15%, #ffeadb 75%);
+		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #ff9a76 15%, #ffeadb 75%);
+		background-image: url("images/overlay.png"), linear-gradient(45deg, #ff9a76 15%, #ffeadb 75%);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -312,11 +312,11 @@ input, select, textarea {
 	}
 
 	strong, b {
-		color: #ffffff;
+		color: #000000;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
+		color: black;
 	}
 
 	blockquote {
