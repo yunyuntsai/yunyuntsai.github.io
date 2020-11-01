@@ -2355,7 +2355,7 @@ input, select, textarea {
 	}
 
 		.icon.alt:hover {
-			background-color: rgba(255, 255, 255, 0.075);
+			background-color: rgba(127, 58, 192, 0.11);
 		}
 
 		.icon.alt:active {
@@ -3531,7 +3531,7 @@ input, select, textarea {
 		}
 
 			#main .icon.alt:hover {
-				background-color: rgba(222, 222, 222, 0.25);
+				background-color: rgba(211, 111, 224, 0.822);
 			}
 
 			#main .icon.alt:active {
