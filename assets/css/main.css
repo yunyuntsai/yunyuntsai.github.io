@@ -1,5 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
 
 /*
 	Stellar by HTML5 UP
@@ -125,12 +126,12 @@ input, select, textarea {
 	}
 
 	body, input, select, textarea {
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 17pt;
-		font-weight: 300;
+	    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		font-size: 16pt;
+		font-weight: 200;
 		line-height: 1.65;
+		
 	}
-
 		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
@@ -170,7 +171,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		font-weight: 400;
+		font-weight: 600;
 	}
 
 	em, i {
@@ -2983,7 +2984,7 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 	}
 
-		.spotlight .content {
+		. .content {
 			-moz-flex: 1;
 			-webkit-flex: 1;
 			-ms-flex: 1;
@@ -3002,7 +3003,7 @@ input, select, textarea {
 			display: inline-block;
 			margin-left: 4em;
 			padding: 0.65em;
-			border-radius: 100%;
+			border-radius: 100%; 
 			border: solid 1px;
 		}
 
@@ -3220,7 +3221,7 @@ input, select, textarea {
 		color: #636363;
 		position: absolute;
 		width: 64em;
-		max-width: calc(70% - 4em);
+		max-width: calc(80% - 4em);
 		padding: 1em;
 		background-color: #f7f7f7;
 		border-top-left-radius: 0.25em;
@@ -3765,7 +3766,7 @@ input, select, textarea {
 
 	#wrapper {
 		width: 64em;
-		max-width: calc(70% - 4em);
+		max-width: calc(80% - 4em);
 		margin: 0 auto;
 	}
 
