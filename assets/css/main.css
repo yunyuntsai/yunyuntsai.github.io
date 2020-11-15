@@ -121,7 +121,7 @@ input, select, textarea {
 /* Type */
 
 	body {
-		background-color: #935d8c;
+		background-color: #dd948f;
 		color: rgba(255, 255, 255, 0.85);
 	}
 
@@ -2164,17 +2164,17 @@ input, select, textarea {
 		}
 
 	select {
-		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='rgba(255, 255, 255, 0.35)' /%3E%3C/svg%3E");
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='rgba(0, 0, 0, 0.35)' /%3E%3C/svg%3E");
 	}
 
 		select option {
-			color: #ffffff;
-			background: #935d8c;
+			color: black;
+			background:  #ffeadb;
 		}
 
 	input[type="checkbox"] + label,
 	input[type="radio"] + label {
-		color: rgba(255, 255, 255, 0.65);
+		color: rgba(0, 0, 0, 0.85);
 	}
 
 		input[type="checkbox"] + label:before,
@@ -3220,6 +3220,7 @@ input, select, textarea {
 		background-color: #ffffff;
 		color: #636363;
 		position: absolute;
+		overflow: hidden;
 		width: 64em;
 		max-width: calc(80% - 4em);
 		padding: 1em;
@@ -3320,6 +3321,48 @@ input, select, textarea {
 				#nav.alt ul li a {
 					font-size: 0.9em;
 				}
+		/* The subnavigation menu */
+		#nav.subnav {
+			float: left;
+			overflow: hidden;
+		}
+		
+		/* Subnav button */
+		#nav.subnav #nav.subnavbtn {
+			font-size: 16px;
+			border: none;
+			outline: none;
+			color: white;
+			padding: 14px 16px;
+			background-color: inherit;
+			font-family: inherit;
+			margin: 0;
+		}
+		/* Style the subnav content - positioned absolute */
+		#nav.subnav-content {
+			display: none;
+			position: absolute;
+			left: 0;
+			background-color: red;
+			width: 100%;
+			z-index: 1;
+		}
+  
+		/* Style the subnav links */
+		#nav.subnav-content a {
+			float: left;
+			color: white;
+			text-decoration: none;
+		}
+		
+		/* Add a grey background color on hover */
+		#nav.subnav-content a:hover {
+			background-color: #eee;
+			color: black;
+		}
+		#nav.subnav:hover #nav.subnav-content {
+			display: block;
+		  }
 
 		@media screen and (max-width: 736px) {
 
@@ -3531,7 +3574,7 @@ input, select, textarea {
 		}
 
 			#main .icon.alt:hover {
-				background-color: rgba(211, 111, 224, 0.822);
+				background-color: rgba(228, 147, 147, 0.822);
 			}
 
 			#main .icon.alt:active {
