@@ -101,35 +101,42 @@
   if (typingEl && !reduceMotion) {
     var text = typingEl.textContent;
     typingEl.textContent = '';
-    var typed = false;
-    var typeTimer = null;
-    var startTyping = function () {
-      if (typed) return;
-      typed = true;
-      if (typeTimer) clearInterval(typeTimer);
+    var iv = null, timer = null, running = false;
+    function stopTyping() {
+      if (iv) clearInterval(iv);
+      if (timer) clearTimeout(timer);
+      iv = timer = null;
+      running = false;
+    }
+    function eraseLoop() {
+      iv = setInterval(function () {
+        typingEl.textContent = typingEl.textContent.slice(0, -1);
+        if (!typingEl.textContent.length) {
+          clearInterval(iv); iv = null;
+          timer = setTimeout(typeLoop, 700);   // short pause, then retype
+        }
+      }, 45);
+    }
+    function typeLoop() {
+      running = true;
       typingEl.textContent = '';
       var i = 0;
-      typeTimer = setInterval(function () {
+      iv = setInterval(function () {
         typingEl.textContent = text.slice(0, ++i);
-        if (i >= text.length) { clearInterval(typeTimer); typeTimer = null; }
+        if (i >= text.length) {
+          clearInterval(iv); iv = null;
+          timer = setTimeout(eraseLoop, 2000); // hold the full sentence, then erase
+        }
       }, 90);
-    };
+    }
     if ('IntersectionObserver' in window) {
       var tio = new IntersectionObserver(function (entries) {
-        if (entries[0].isIntersecting) setTimeout(startTyping, 350);
-        else if (typed) { typed = false; if (typeTimer) clearInterval(typeTimer); typingEl.textContent = ''; }
+        if (entries[0].isIntersecting) { if (!running) timer = setTimeout(typeLoop, 350); }
+        else { stopTyping(); typingEl.textContent = ''; }
       }, { threshold: 0.9 });
       tio.observe(typingEl);
     } else {
-      startTyping();
-    }
-    // Retype on hover over the About section
-    var aboutSection = document.getElementById('about');
-    if (aboutSection && finePointer) {
-      aboutSection.addEventListener('mouseenter', function () {
-        typed = false;
-        startTyping();
-      });
+      typeLoop();
     }
   }
 
