@@ -97,9 +97,10 @@
   }
 
   // Typing animation for the About greeting (replays whenever it scrolls back into view)
-  var typingEl = document.querySelector('.about-greeting.typing');
+  var typingEl = document.querySelector('.about-greeting .typing');
   if (typingEl && !reduceMotion) {
     var text = typingEl.textContent;
+    var chars = Array.from(text);  // split by code point so emoji (surrogate pairs) type correctly
     typingEl.textContent = '';
     var iv = null, timer = null, running = false;
     function stopTyping() {
@@ -110,7 +111,7 @@
     }
     function eraseLoop() {
       iv = setInterval(function () {
-        typingEl.textContent = typingEl.textContent.slice(0, -1);
+        typingEl.textContent = Array.from(typingEl.textContent).slice(0, -1).join('');
         if (!typingEl.textContent.length) {
           clearInterval(iv); iv = null;
           timer = setTimeout(typeLoop, 700);   // short pause, then retype
@@ -122,8 +123,8 @@
       typingEl.textContent = '';
       var i = 0;
       iv = setInterval(function () {
-        typingEl.textContent = text.slice(0, ++i);
-        if (i >= text.length) {
+        typingEl.textContent = chars.slice(0, ++i).join('');
+        if (i >= chars.length) {
           clearInterval(iv); iv = null;
           timer = setTimeout(eraseLoop, 2000); // hold the full sentence, then erase
         }
