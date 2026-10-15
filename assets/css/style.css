@@ -153,6 +153,23 @@ blockquote {
 }
 .social a:hover, .social a:focus { background: var(--accent); border-color: var(--accent); color: #fff; text-decoration: none; }
 
+/* Mouse-trail stars in the hero (ported from the reference's #star / floatOne..Five) */
+.hero { overflow: hidden; }
+.star-layer { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.mouse-star {
+  position: absolute;
+  font-size: 30px; line-height: 1;
+  transform: translate(-50%, -50%);
+  animation-duration: .9s; animation-iteration-count: 1; animation-fill-mode: forwards;
+  text-shadow: 0 0 6px currentColor;
+  will-change: transform, opacity;
+}
+@keyframes floatOne   { 0%,50% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -50%) translate3d(0, -20px, 0) scale(.2) rotate(45deg); } }
+@keyframes floatTwo   { 0%,50% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -50%) translate3d(0, -35px, 0) scale(.1) rotate(45deg); } }
+@keyframes floatThree { 0%,50% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -50%) translate3d(0, -50px, 0) scale(.3) rotate(45deg); } }
+@keyframes floatFour  { 0%,50% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -50%) translate3d(0, -65px, 0) scale(.1) rotate(45deg); } }
+@keyframes floatFive  { 0%,50% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -50%) translate3d(0, -80px, 0) scale(.2) rotate(45deg); } }
+
 .scroll-hint {
   position: absolute; left: 0; right: 0; bottom: 24px; z-index: 1;
   text-align: center; font-size: 24px; color: #fff; opacity: .8;

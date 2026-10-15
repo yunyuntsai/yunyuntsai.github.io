@@ -70,6 +70,31 @@
     animated.forEach(go);
   }
 
+  // Mouse-trail stars in the hero (ported from the reference's myjs.js). Desktop pointers only.
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (hero && finePointer && !reduceMotion) {
+    var layer = document.createElement('div');
+    layer.className = 'star-layer';
+    layer.setAttribute('aria-hidden', 'true');
+    hero.appendChild(layer);
+    var floats = ['floatOne', 'floatTwo', 'floatThree', 'floatFour', 'floatFive'];
+    var hue = 0;
+    setInterval(function () { hue = (hue + 1) % 360; }, 10);
+    hero.addEventListener('mousemove', function (e) {
+      var rect = hero.getBoundingClientRect();
+      var star = document.createElement('div');
+      star.className = 'mouse-star';
+      star.textContent = '\u272E';
+      star.style.left = (e.clientX - rect.left) + 'px';
+      star.style.top = (e.clientY - rect.top) + 'px';
+      star.style.color = 'hsla(' + hue + ',100%,70%,0.6)';
+      star.style.animationName = floats[Math.floor(Math.random() * floats.length)];
+      layer.appendChild(star);
+      setTimeout(function () { star.remove(); }, 900);
+    });
+  }
+
   var lastedit = document.getElementById('lastedit');
   if (lastedit) {
     var d = new Date(document.lastModified);
