@@ -55,12 +55,16 @@
     el.classList.add('go');
     el.addEventListener('animationend', function () { el.classList.add('done'); }, { once: true });
   }
+  function reset(el) { el.classList.remove('go', 'done'); }
   if ('IntersectionObserver' in window) {
+    // Replay on every entry: reset when the element fully leaves the viewport (like the reference's css3-animate-it)
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) { go(entry.target); io.unobserve(entry.target); }
+        var tall = entry.boundingClientRect.height > window.innerHeight * 0.8;
+        if (entry.isIntersecting && (entry.intersectionRatio >= 0.15 || tall)) go(entry.target);
+        else if (!entry.isIntersecting && entry.target.classList.contains('go')) reset(entry.target);
       });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: [0, 0.15] });
     animated.forEach(function (el) { io.observe(el); });
   } else {
     animated.forEach(go);
