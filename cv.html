@@ -1,18 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CV — Yun-Yun (Alice) Tsai</title>
+	<link rel="icon" href="images/LOGO1.png">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
 
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <title>PDF frame scrolling test</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <style>
-      #container { overflow: auto; -webkit-overflow-scrolling: touch; width: 100%;}
-      object { width: 100%; height: 2000px }
-    </style>
-  </head>
-  <body>
-    <div id="container">
-      <object id="obj" data="files/yunyun_new_cv.pdf#scrollbar=0&;view​=Fit" ></object>
-    </div>
-  </body>
+	<nav class="site-nav is-visible" data-always aria-label="Main navigation">
+		<div class="container">
+			<a href="index.html" class="brand">Yun-Yun Tsai</a>
+			<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation"><span class="fa fa-bars" aria-hidden="true"></span></button>
+			<ul class="nav-links" id="menu">
+				<li><a href="index.html#about">About</a></li>
+				<li><a href="index.html#experience">Experience</a></li>
+				<li><a href="index.html#publications">Publications</a></li>
+				<li><a href="musicexp.html">Music</a></li>
+				<li><a href="workingexp.html">Others</a></li>
+				<li><a href="cv.html" class="active">CV</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<main>
+	<section id="cv" class="section" style="padding-top: calc(var(--nav-height) + 40px);">
+		<div class="container">
+			<div class="section-heading">
+				<h2>Curriculum Vitae</h2>
+				<span class="divider"></span>
+				<p><a class="btn" href="files/yunyun_new_cv.pdf" download><span class="fa fa-download" aria-hidden="true"></span>&nbsp; Download PDF</a></p>
+			</div>
+			<object class="pdf-frame" data="files/yunyun_new_cv.pdf" type="application/pdf">
+				<p>Your browser cannot display the PDF inline. <a href="files/yunyun_new_cv.pdf">Download the CV</a> instead.</p>
+			</object>
+		</div>
+	</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container">
+			<p class="footer-contact"><span>Email: <a href="mailto:yt2781@columbia.edu">yt2781@columbia.edu</a></span></p>
+			<p>&copy; Yun-Yun (Alice) Tsai &middot; <a href="index.html">&larr; Back to home</a></p>
+		</div>
+	</footer>
+
+	<script src="assets/js/site.js"></script>
+</body>
 </html>
-
