@@ -96,6 +96,32 @@
     });
   }
 
+  // Typing animation for the About greeting (replays whenever it scrolls back into view)
+  var typingEl = document.querySelector('.about-greeting.typing');
+  if (typingEl && !reduceMotion) {
+    var text = typingEl.textContent;
+    typingEl.textContent = '';
+    var typed = false;
+    var startTyping = function () {
+      if (typed) return;
+      typed = true;
+      var i = 0;
+      var t = setInterval(function () {
+        typingEl.textContent = text.slice(0, ++i);
+        if (i >= text.length) clearInterval(t);
+      }, 90);
+    };
+    if ('IntersectionObserver' in window) {
+      var tio = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) startTyping();
+        else if (typed) { typed = false; typingEl.textContent = ''; }
+      }, { threshold: 0.5 });
+      tio.observe(typingEl);
+    } else {
+      startTyping();
+    }
+  }
+
   // Light / dark theme toggle (defaults to light; initial theme is applied inline in <head> to avoid a flash)
   var themeBtn = document.querySelector('.theme-toggle');
   if (themeBtn) {

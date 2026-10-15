@@ -332,6 +332,14 @@ blockquote {
 }
 .about-text p:last-child { margin-bottom: 0; }
 .about-greeting { margin-bottom: 10px; font-size: 20px; color: var(--text-dark); }
+.about-greeting.typing { font-family: ui-monospace, 'Courier New', monospace; }
+.about-greeting.typing::after {
+  content: ''; display: inline-block;
+  width: 2px; height: 1em; margin-left: 3px; vertical-align: -2px;
+  background: var(--accent-dark);
+  animation: caretBlink .9s step-end infinite;
+}
+@keyframes caretBlink { 50% { opacity: 0; } }
 
 /* News */
 .news-list { margin: 0; padding: 0; list-style: none; }
