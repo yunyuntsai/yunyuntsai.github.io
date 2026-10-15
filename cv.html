@@ -7,7 +7,7 @@
 	<link rel="icon" href="images/LOGO1.png">
 	<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
-	<script>(function(){try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+	<script>(function(){var t='light';try{t=localStorage.getItem('theme')||'light';}catch(e){}document.documentElement.setAttribute('data-theme',t);})();</script>
 </head>
 <body>
 

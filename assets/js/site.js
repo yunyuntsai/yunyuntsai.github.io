@@ -96,17 +96,13 @@
     });
   }
 
-  // Light / dark theme toggle (initial theme is applied inline in <head> to avoid a flash)
+  // Light / dark theme toggle (defaults to light; initial theme is applied inline in <head> to avoid a flash)
   var themeBtn = document.querySelector('.theme-toggle');
   if (themeBtn) {
     themeBtn.addEventListener('click', function () {
       var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', next);
       try { localStorage.setItem('theme', next); } catch (e) {}
-    });
-    matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
-      try { if (localStorage.getItem('theme')) return; } catch (err) {}
-      document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
     });
   }
 

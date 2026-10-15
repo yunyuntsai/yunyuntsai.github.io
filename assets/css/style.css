@@ -221,14 +221,23 @@ blockquote {
 .site-nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   height: var(--nav-height);
-  background: var(--nav-bg);
-  border-top: 5px solid var(--accent);
-  box-shadow: 0 1px 0 var(--shadow);
-  transform: translateY(-100%);
-  transition: transform .3s ease, box-shadow .3s ease;
+  background: transparent;
+  border-top: 5px solid transparent;
+  transition: background-color .3s ease, box-shadow .3s ease, border-color .3s ease;
 }
-.site-nav.is-visible { transform: translateY(0); box-shadow: 0 2px 10px var(--shadow); }
+.site-nav.is-visible {
+  background: var(--nav-bg);
+  border-top-color: var(--accent);
+  box-shadow: 0 2px 10px var(--shadow);
+}
 .site-nav .container { display: flex; align-items: center; justify-content: space-between; height: 100%; }
+
+/* Over the hero (not yet scrolled) the nav is transparent with white text */
+.site-nav:not(.is-visible) .brand,
+.site-nav:not(.is-visible) .nav-toggle,
+.site-nav:not(.is-visible) .theme-toggle { color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,.5); }
+.site-nav:not(.is-visible) .theme-toggle { border-color: rgba(255,255,255,.5); }
+.site-nav:not(.is-visible) .theme-toggle:hover { background: rgba(255,255,255,.15); color: #fff; }
 
 .brand {
   font-family: var(--font-heading);
@@ -245,6 +254,10 @@ blockquote {
   color: var(--text-dark); border-radius: 4px;
 }
 .nav-links a:hover, .nav-links a:focus, .nav-links a.active { color: var(--accent-dark); background: var(--accent-tint); text-decoration: none; }
+@media (min-width: 768px) {
+  .site-nav:not(.is-visible) .nav-links a { color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,.5); }
+  .site-nav:not(.is-visible) .nav-links a:hover, .site-nav:not(.is-visible) .nav-links a:focus, .site-nav:not(.is-visible) .nav-links a.active { color: #fff; background: rgba(255,255,255,.15); }
+}
 
 .nav-right { display: flex; align-items: center; gap: 8px; }
 .theme-toggle {
