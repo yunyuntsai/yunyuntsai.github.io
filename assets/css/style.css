@@ -246,7 +246,7 @@ blockquote {
 }
 .brand:hover { color: var(--accent-dark); text-decoration: none; }
 
-.nav-links { display: flex; gap: 6px; margin: 0 16px 0 auto; padding: 0; list-style: none; }
+.nav-links { display: flex; gap: 6px; margin: 0 0 0 auto; padding: 0; list-style: none; order: 2; }
 .nav-links a {
   display: block; padding: 8px 14px;
   font-family: var(--font-heading); font-size: 14px; font-weight: 600;
@@ -259,7 +259,7 @@ blockquote {
   .site-nav:not(.is-visible) .nav-links a:hover, .site-nav:not(.is-visible) .nav-links a:focus, .site-nav:not(.is-visible) .nav-links a.active { color: #fff; background: rgba(255,255,255,.15); }
 }
 
-.nav-right { display: flex; align-items: center; gap: 8px; }
+.nav-right { display: flex; align-items: center; gap: 8px; order: 3; margin-left: 20px; }
 .theme-toggle {
   display: inline-flex; align-items: center; justify-content: center;
   width: 38px; height: 38px; padding: 0;
@@ -565,6 +565,7 @@ blockquote {
     display: none;
   }
   .nav-links.is-open { display: flex; }
+  .nav-right { margin-left: auto; }
   .nav-links a { padding: 12px 10px; }
 
   .about-intro { grid-template-columns: minmax(0, 1fr); gap: 24px; justify-items: center; }
