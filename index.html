@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
 	<link rel="stylesheet" href="academicons-1.9.0/css/academicons.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<script>(function(){try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
 
@@ -20,7 +21,10 @@
 	<nav class="site-nav" aria-label="Main navigation">
 		<div class="container">
 			<a href="index.html" class="brand">Yun-Yun Tsai</a>
-			<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation"><span class="fa fa-bars" aria-hidden="true"></span></button>
+			<div class="nav-right">
+				<button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode"><span class="fa fa-moon" aria-hidden="true"></span><span class="fa fa-sun" aria-hidden="true"></span></button>
+				<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation"><span class="fa fa-bars" aria-hidden="true"></span></button>
+			</div>
 			<ul class="nav-links" id="menu">
 				<li><a href="#about">About</a></li>
 				<li><a href="#experience">Experience</a></li>
