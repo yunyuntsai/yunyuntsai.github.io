@@ -102,23 +102,34 @@
     var text = typingEl.textContent;
     typingEl.textContent = '';
     var typed = false;
+    var typeTimer = null;
     var startTyping = function () {
       if (typed) return;
       typed = true;
+      if (typeTimer) clearInterval(typeTimer);
+      typingEl.textContent = '';
       var i = 0;
-      var t = setInterval(function () {
+      typeTimer = setInterval(function () {
         typingEl.textContent = text.slice(0, ++i);
-        if (i >= text.length) clearInterval(t);
+        if (i >= text.length) { clearInterval(typeTimer); typeTimer = null; }
       }, 90);
     };
     if ('IntersectionObserver' in window) {
       var tio = new IntersectionObserver(function (entries) {
         if (entries[0].isIntersecting) setTimeout(startTyping, 350);
-        else if (typed) { typed = false; typingEl.textContent = ''; }
+        else if (typed) { typed = false; if (typeTimer) clearInterval(typeTimer); typingEl.textContent = ''; }
       }, { threshold: 0.9 });
       tio.observe(typingEl);
     } else {
       startTyping();
+    }
+    // Retype on hover over the About section
+    var aboutSection = document.getElementById('about');
+    if (aboutSection && finePointer) {
+      aboutSection.addEventListener('mouseenter', function () {
+        typed = false;
+        startTyping();
+      });
     }
   }
 
