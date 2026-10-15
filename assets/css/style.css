@@ -389,6 +389,46 @@ blockquote {
 #top.is-visible { display: block; }
 
 /* --------------------------------------------------------------------------
+   Scroll animations (same names/feel as css3-animate-it used by the reference)
+   Elements with .animated start hidden; JS adds .go when they enter the viewport.
+   -------------------------------------------------------------------------- */
+.animated { opacity: 0; animation-duration: 1s; animation-fill-mode: both; }
+.animated.slow { animation-duration: 1.5s; }
+.animated.slower { animation-duration: 2s; }
+.animated.go { opacity: 1; }
+.animated.done { animation: none; opacity: 1; }
+.no-js .animated { opacity: 1; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeInDown { 0% { opacity: 0; transform: translateY(-120px); } 50% { opacity: .3; } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInUp { 0% { opacity: 0; transform: translateY(120px); } 50% { opacity: .3; } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInLeft { 0% { opacity: 0; transform: translateX(-120px); } 50% { opacity: .3; } 100% { opacity: 1; transform: translateX(0); } }
+@keyframes bounceInDown {
+  0% { opacity: 0; transform: translateY(-400px); }
+  60% { opacity: 1; transform: translateY(30px); }
+  80% { transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes rotateInDownLeft {
+  0% { transform-origin: left bottom; transform: rotate(-90deg); opacity: 0; }
+  100% { transform-origin: left bottom; transform: rotate(0); opacity: 1; }
+}
+
+.fadeIn.go { animation-name: fadeIn; }
+.fadeInDown.go { animation-name: fadeInDown; }
+.fadeInUp.go { animation-name: fadeInUp; }
+.fadeInLeft.go { animation-name: fadeInLeft; }
+.bounceInDown.go { animation-name: bounceInDown; }
+.rotateInDownLeft.go { animation-name: rotateInDownLeft; }
+
+/* Stagger items inside lists */
+.stagger > .animated:nth-child(2) { animation-delay: .12s; }
+.stagger > .animated:nth-child(3) { animation-delay: .24s; }
+.stagger > .animated:nth-child(4) { animation-delay: .36s; }
+.stagger > .animated:nth-child(5) { animation-delay: .48s; }
+.stagger > .animated:nth-child(n+6) { animation-delay: .6s; }
+
+/* --------------------------------------------------------------------------
    Footer
    -------------------------------------------------------------------------- */
 .site-footer {
@@ -460,4 +500,5 @@ blockquote {
   html { scroll-behavior: auto; }
   .scroll-hint { animation: none; }
   .card, .card:hover, .gallery img { transition: none; transform: none; }
+  .animated { opacity: 1; animation: none !important; }
 }

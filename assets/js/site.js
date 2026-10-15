@@ -49,6 +49,23 @@
     });
   }
 
+  // Scroll-triggered animations (replaces css3-animate-it from the reference theme)
+  var animated = document.querySelectorAll('.animated');
+  function go(el) {
+    el.classList.add('go');
+    el.addEventListener('animationend', function () { el.classList.add('done'); }, { once: true });
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { go(entry.target); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    animated.forEach(function (el) { io.observe(el); });
+  } else {
+    animated.forEach(go);
+  }
+
   var lastedit = document.getElementById('lastedit');
   if (lastedit) {
     var d = new Date(document.lastModified);
