@@ -113,9 +113,9 @@
     };
     if ('IntersectionObserver' in window) {
       var tio = new IntersectionObserver(function (entries) {
-        if (entries[0].isIntersecting) startTyping();
+        if (entries[0].isIntersecting) setTimeout(startTyping, 350);
         else if (typed) { typed = false; typingEl.textContent = ''; }
-      }, { threshold: 0.5 });
+      }, { threshold: 0.9 });
       tio.observe(typingEl);
     } else {
       startTyping();
