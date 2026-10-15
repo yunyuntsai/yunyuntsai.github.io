@@ -36,7 +36,7 @@
   color-scheme: light;
   --nav-height: 64px;
   --content-width: 800px;
-  --hero-image: url('../../images/piano.jpg');
+  --hero-image: url('../../images/hero-bg.jpg');
   --font-body: 'Ek Mukta', 'Helvetica Neue', Arial, sans-serif;
   --font-heading: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -140,7 +140,7 @@ blockquote {
   justify-content: center;
   text-align: center;
   padding: 120px 24px;
-  background: var(--hero-image) no-repeat center center / cover;
+  background: var(--hero-image) no-repeat center 30% / cover;
   color: #fff;
 }
 .hero::before {
