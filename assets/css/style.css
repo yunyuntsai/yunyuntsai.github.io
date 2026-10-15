@@ -158,17 +158,20 @@ blockquote {
 .star-layer { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
 .mouse-star {
   position: absolute;
-  font-size: 30px; line-height: 1;
+  --sway: 0px;
+  font-size: 26px; line-height: 1;
   transform: translate(-50%, -50%);
-  animation-duration: .9s; animation-iteration-count: 1; animation-fill-mode: forwards;
-  text-shadow: 0 0 6px currentColor;
+  animation-duration: 1.05s; animation-iteration-count: 1; animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  text-shadow: 0 0 6px rgba(0,0,0,.25);
   will-change: transform, opacity;
 }
-@keyframes floatOne   { 0%,50% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -50%) translate3d(0, -20px, 0) scale(.2) rotate(45deg); } }
-@keyframes floatTwo   { 0%,50% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -50%) translate3d(0, -35px, 0) scale(.1) rotate(45deg); } }
-@keyframes floatThree { 0%,50% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -50%) translate3d(0, -50px, 0) scale(.3) rotate(45deg); } }
-@keyframes floatFour  { 0%,50% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -50%) translate3d(0, -65px, 0) scale(.1) rotate(45deg); } }
-@keyframes floatFive  { 0%,50% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -50%) translate3d(0, -80px, 0) scale(.2) rotate(45deg); } }
+/* Leaves drift up/sideways, tumble and shrink while fading (adapted from the reference's floatOne..Five) */
+@keyframes floatOne   { 0%,45% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -50%) translate3d(var(--sway), -25px, 0) scale(.3) rotate(120deg); } }
+@keyframes floatTwo   { 0%,45% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -50%) translate3d(var(--sway), -40px, 0) scale(.2) rotate(-150deg); } }
+@keyframes floatThree { 0%,45% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -50%) translate3d(var(--sway), -55px, 0) scale(.35) rotate(200deg); } }
+@keyframes floatFour  { 0%,45% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -50%) translate3d(var(--sway), -70px, 0) scale(.2) rotate(-90deg); } }
+@keyframes floatFive  { 0%,45% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -50%) translate3d(var(--sway), -85px, 0) scale(.25) rotate(160deg); } }
 
 .scroll-hint {
   position: absolute; left: 0; right: 0; bottom: 24px; z-index: 1;

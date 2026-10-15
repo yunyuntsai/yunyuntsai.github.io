@@ -79,19 +79,20 @@
     layer.setAttribute('aria-hidden', 'true');
     hero.appendChild(layer);
     var floats = ['floatOne', 'floatTwo', 'floatThree', 'floatFour', 'floatFive'];
-    var hue = 0;
-    setInterval(function () { hue = (hue + 1) % 360; }, 10);
+    // Autumn palette: hue sweeps red (0) -> orange -> gold (50) and back
+    var hue = 0, dir = 1;
+    setInterval(function () { hue += dir; if (hue >= 50 || hue <= 0) dir = -dir; }, 20);
     hero.addEventListener('mousemove', function (e) {
       var rect = hero.getBoundingClientRect();
-      var star = document.createElement('div');
-      star.className = 'mouse-star';
-      star.textContent = '\u272E';
-      star.style.left = (e.clientX - rect.left) + 'px';
-      star.style.top = (e.clientY - rect.top) + 'px';
-      star.style.color = 'hsla(' + hue + ',100%,70%,0.6)';
-      star.style.animationName = floats[Math.floor(Math.random() * floats.length)];
-      layer.appendChild(star);
-      setTimeout(function () { star.remove(); }, 900);
+      var leaf = document.createElement('span');
+      leaf.className = 'mouse-star fab fa-canadian-maple-leaf';
+      leaf.style.left = (e.clientX - rect.left) + 'px';
+      leaf.style.top = (e.clientY - rect.top) + 'px';
+      leaf.style.color = 'hsla(' + hue + ',95%,' + (55 + Math.random() * 15) + '%,0.75)';
+      leaf.style.animationName = floats[Math.floor(Math.random() * floats.length)];
+      leaf.style.setProperty('--sway', (Math.random() * 40 - 20) + 'px');
+      layer.appendChild(leaf);
+      setTimeout(function () { leaf.remove(); }, 1100);
     });
   }
 
