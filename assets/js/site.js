@@ -151,6 +151,16 @@
     });
   }
 
+  // TL;DR toggles on publication entries
+  document.querySelectorAll('.tldr-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var tldr = btn.closest('.pub-body').querySelector('.pub-tldr');
+      var open = tldr.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', String(open));
+      btn.textContent = open ? 'TL;DR \u25B4' : 'TL;DR \u25BE';
+    });
+  });
+
   var lastedit = document.getElementById('lastedit');
   if (lastedit) {
     var d = new Date(document.lastModified);
