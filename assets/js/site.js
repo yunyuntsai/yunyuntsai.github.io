@@ -79,13 +79,13 @@
     layer.setAttribute('aria-hidden', 'true');
     hero.appendChild(layer);
     var floats = ['floatOne', 'floatTwo', 'floatThree', 'floatFour', 'floatFive'];
-    // Autumn palette: hue sweeps red (0) -> orange -> gold (50) and back
-    var hue = 0, dir = 1;
-    setInterval(function () { hue += dir; if (hue >= 50 || hue <= 0) dir = -dir; }, 20);
+    // Teal palette: hue sweeps the site's accent range (155 -> 185 -> back)
+    var hue = 155, dir = 1;
+    setInterval(function () { hue += dir; if (hue >= 185 || hue <= 155) dir = -dir; }, 20);
     hero.addEventListener('mousemove', function (e) {
       var rect = hero.getBoundingClientRect();
       var leaf = document.createElement('span');
-      leaf.className = 'mouse-star fab fa-canadian-maple-leaf';
+      leaf.className = 'mouse-star fa fa-music';
       leaf.style.left = (e.clientX - rect.left) + 'px';
       leaf.style.top = (e.clientY - rect.top) + 'px';
       leaf.style.color = 'hsla(' + hue + ',95%,' + (55 + Math.random() * 15) + '%,0.75)';
