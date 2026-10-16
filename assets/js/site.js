@@ -155,9 +155,7 @@
   document.querySelectorAll('.tldr-toggle').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var tldr = btn.closest('.pub-body').querySelector('.pub-tldr');
-      var open = tldr.classList.toggle('is-open');
-      btn.setAttribute('aria-expanded', String(open));
-      btn.textContent = open ? 'TL;DR \u25B4' : 'TL;DR \u25BE';
+      btn.setAttribute('aria-expanded', String(tldr.classList.toggle('is-open')));
     });
   });
 
