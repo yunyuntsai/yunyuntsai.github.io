@@ -12,7 +12,7 @@
 	<link rel="image_src" type="image/jpeg" href="images/new_profile_yunyun.JPG">
 	<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
 	<link rel="stylesheet" href="academicons-1.9.0/css/academicons.min.css">
-	<link rel="stylesheet" href="assets/css/style.css?v=11">
+	<link rel="stylesheet" href="assets/css/style.css?v=14">
 	<script>(function(){var t='light';try{t=localStorage.getItem('theme')||'light';}catch(e){}document.documentElement.setAttribute('data-theme',t);})();</script>
 </head>
 <body>
@@ -509,6 +509,69 @@
 					<p class="paper-authors" style="margin:0">Pin-Yu Chen, I-Hsin Chung, Bo Wu, Chuang Gan, Lei Hsiung, <b>Yun-Yun Tsai</b>, Tsung-Yi Ho. &rdquo;Composite Adversarial Attack Model Training For Neural Networks&rdquo;, U.S. Patent Application No: 18/331,211, Application Date: May 12, 2026.</p>
 				</li>
 			</ol>
+		</div>
+	</section>
+
+	<!-- Visitor Map -->
+	<section id="visitors" class="section">
+		<div class="container content">
+			<div class="section-heading animated bounceInDown">
+				<h2>Visitor Map</h2>
+				<span class="divider"></span>
+				<p>Where my visitors are reading from</p>
+			</div>
+			<div class="visitor-map animated fadeInUp">
+				<div class="visitor-map-card">
+					<div id="vmap" class="vmap"></div>
+					<div class="recent-visitors" id="recent-visitors">
+						<h3>Recent visitors</h3>
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+	<script>
+	(function () {
+		var map = L.map('vmap', { minZoom: 2, maxZoom: 14, worldCopyJump: true });
+		L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+			attribution: 'Esri, HERE, Garmin, USGS, NGA',
+			maxZoom: 19
+		}).addTo(map);
+		map.setView([32, 0], 2);
+		window.mmvCumulative = function (txt) {
+			var re = /\{latLng:\s*\[\s*(-?[\d.]+)\s*,\s*(-?[\d.]+)\s*\]\s*,\s*name:\s*"([^"]*)"\}/g, m;
+			while ((m = re.exec(txt))) {
+				L.circleMarker([+m[1], +m[2]], {
+					radius: 12,
+					fillColor: '#F8A400', color: '#fff', weight: 2,
+					opacity: 1, fillOpacity: .85
+				}).bindTooltip(m[3]).addTo(map);
+			}
+		};
+		window.mmvRecent = function (txt) {
+			var ul = document.querySelector('#recent-visitors ul');
+			var re = /addRealtimeVisitors\(\s*\d+\s*,\s*"([^"]*)"\s*,\s*"([^"]*)"\s*,\s*"([^"]*)"\s*,\s*"([^"]*)"\s*,\s*"([^"]*)"\s*\)/g, m;
+			while ((m = re.exec(txt))) {
+				var flag = '<img class="rv-flag" src="https://flagcdn.com/w40/' + m[2].toLowerCase() + '.png" alt="' + m[5] + '" onerror="this.style.display=\'none\'">';
+				var when = new Date(m[3].replace(' ', 'T') + 'Z');
+				var date = isNaN(when) ? m[3] : when.toLocaleString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' });
+				var li = document.createElement('li');
+				li.innerHTML = '<span class="rv-flag">' + flag + '</span><span class="rv-loc">' + m[1] + '</span><span class="rv-hits">' + m[4] + (m[4] === '1' ? ' pageview' : ' pageviews') + '</span><span class="rv-date">' + date + ' ET</span>';
+				ul.appendChild(li);
+			}
+			if (!ul.children.length) document.getElementById('recent-visitors').style.display = 'none';
+		};
+		var s = document.createElement('script');
+		s.async = true;
+		s.src = '//mapmyvisitors.com/widget_call_home.js?d=YKOcmeNSWFFmlacBOkWLYnyd2RC0SlqRzmJDXxLFCLE&cl=ffffff&w=692&t=m&callback=mmvCumulative';
+		document.body.appendChild(s);
+		var s2 = document.createElement('script');
+		s2.async = true;
+		s2.src = '//mapmyvisitors.com/ajax/map?last_hit_id=0&initial_hit_id=0&initial=true&animate=false&user=0&url=https%3A%2F%2Fyunyuntsai.github.io%2F&id=2251906&globalTotal=false&mapType=widget&callback=mmvRecent';
+		document.body.appendChild(s2);
+	})();
+	</script>
 		</div>
 	</section>
 
