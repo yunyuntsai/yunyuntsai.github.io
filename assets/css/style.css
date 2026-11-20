@@ -443,6 +443,8 @@ blockquote {
 .timeline-role { font-weight: 600; color: var(--text-dark); }
 .timeline-date { font-size: 14px; color: var(--text-muted); }
 .timeline-body { margin: 0; }
+.mentee-list { columns: 2; column-gap: 48px; margin: 0; padding-left: 22px; }
+.mentee-list li { margin-bottom: 8px; break-inside: avoid; }
 
 .details-grid {
   display: grid;
@@ -627,6 +629,7 @@ blockquote {
 
   .timeline { margin-left: 2px; padding-left: 22px; }
   .timeline > li::before { left: -29px; }
+  .mentee-list { columns: 1; }
   .timeline-logo { width: 38px; height: 38px; }
   .details-grid { grid-template-columns: minmax(0, 1fr); }
   .detail dl { grid-template-columns: minmax(0, 1fr); gap: 2px; }
